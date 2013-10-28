@@ -10,13 +10,10 @@ group :production do
   gem 'thin'
   gem 'pg'
 end
-# shut down original testing gem; use -T, use rspect-rails
-group :development do
-	gem 'rspec-rails', '2.0.0.beta.18'
-end
 
-group :test do
-	gem 'rspec-rails','2.0.0.beta.18'
+# shut down original testing gem; use -T, use rspect-rails
+group :test, :development do
+  gem "rspec-rails", "~> 2.4"
 end
 
 # Gems used only for assets and not required
