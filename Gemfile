@@ -13,8 +13,11 @@ end
 
 # shut down original testing gem; use -T, use rspect-rails
 group :test, :development do
-  gem "rspec-rails", "~> 2.4"
+gem 'rspec-rails'
+#gem 'capybara'
 end
+
+gem 'webrat'
 
 # Gems used only for assets and not required
 # in production environments by default.
