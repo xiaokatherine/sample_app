@@ -5,24 +5,11 @@
 	 Rubies on rails sample App | <%=@title %>
 </title>
 <%= csrf_meta_tag %>
-<%= stylesheet_link_tag "screen", media: "all",
-                                           "data-turbolinks-track" => true %>
-<%= stylesheet_link_tag "custom", media: "all",
-                                           "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= render "layouts/stylesheets" %>
 </head>
 <body>
 	<div class= "container">
-		<header>
-		<%= image_tag("logo.png", :alt => "sample app",:class => "round") %>
-		<nav class = "round">
-			<ul>
-				<li><%= link_to "Home", '#' %></li>
-				<li><%= link_to "Help", '#' %></li>
-				<li><%= link_to "Sign in", '#' %></li>
-			</ul>
-		</nav>
-		</header>
+		<%= render "layouts/header" %>
 		<section class ="round">
 			<%= yield %>
 		</section>
