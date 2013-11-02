@@ -50,4 +50,10 @@ end
 		:content => "#{@base_title} | about")
 	end
   end
+  
+  describe "Get 'help'" do
+	it "should be success" do 
+	get 'help'
+	response.should be_success
+	end
 end
